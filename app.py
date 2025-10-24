@@ -2026,7 +2026,7 @@ def loanofficer_frame():
 
                 try:
                     connection=connect_db()
-                    cursor=connection.cursor()
+                    cursor=connection.cursor()  
                     query="select * from loan_request where request_id=:1 and customer_id=:2 and account_id=:3"
                     cursor.execute(query,(request_id,customer_id,account_id))
                     result=cursor.fetchone()
